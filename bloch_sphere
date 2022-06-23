@@ -1,0 +1,16 @@
+import numpy as np
+
+# Importing standard Qiskit libraries
+from qiskit import QuantumCircuit, transpile, Aer, IBMQ
+from qiskit.tools.jupyter import *
+from qiskit.visualization import *
+from ibm_quantum_widgets import *
+from qiskit.providers.aer import QasmSimulator
+
+# Loading your IBM Quantum account(s)
+provider = IBMQ.load_account()
+from qiskit_textbook.widgets import plot_bloch_vector_spherical
+import math
+from math import pi
+coords=[pi/2, pi/2, 0.5]
+plot_bloch_vector_spherical(coords)
