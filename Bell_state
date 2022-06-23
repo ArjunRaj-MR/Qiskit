@@ -1,0 +1,25 @@
+import numpy as np
+
+# Importing standard Qiskit libraries
+from qiskit import QuantumCircuit, transpile, Aer, IBMQ
+from qiskit.tools.jupyter import *
+from qiskit.visualization import *
+from ibm_quantum_widgets import *
+from qiskit.providers.aer import QasmSimulator
+import qiskit.quantum_info as qi
+
+
+# Loading your IBM Quanrho_AB = qi.DensityMatrix.from_instruction(circuit)tum account(s)
+provider = IBMQ.load_account()
+from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit
+from numpy import pi
+
+qreg_q = QuantumRegister(2, 'q')
+
+circuit = QuantumCircuit(qreg_q)
+
+circuit.h(qreg_q[1])
+circuit.cx(qreg_q[0], qreg_q[1])
+# @columns [1,3]
+circuit.draw()
+rho_AB.draw('latex', prefix='\\rho_{AB} = ')
